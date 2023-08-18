@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<!--
+
+-->
+<html>
+	<head>
+		<title>To Do List App</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+
+				<!-- Header -->
+					<header id="header">
+						<section>
+							<section class="vh-100 gradient-custom-2"></section>
+						  <!-- partial:index.partial.html -->
+						  <h1 id="myHeader">Climb Higher!</h1>
+						  
+						  <!-- STEPs 1 and 2 below here  -->
+						  <p>
+						  <input type = "button", id="addButton", value = "Add", onclick = "addTask()">
+						  <input type = "text" class="nyuryoku" id = "input" placeholder="enter task here...">
+						  </p>
+						  <hr>
+						  
+						  <ul id="tasks">
+						  
+							<li>
+						  
+							  <input type="button" class="done" onclick="markDone(this.parentNode)" value="&#x2713;" />
+						  
+							  <input type="button" class="remove" onclick="remove(this.parentNode)" value="&#x2715;" />
+							  
+							  <input type= "button" class="important" onclick="important(this.parentNode)" value="&#x0021;" />
+						  
+							  make to do list
+						  
+							</li>
+						  
+						  </ul>
+						  
+						  <hr>
+						  
+						  <!-- STEPs 8 and 9 below here  -->
+						  <div>
+							<p id = "divabout"></p>
+							<input type="button" class= "about" value = "About the author", onclick = "doAbout()">
+						  </div>
+						  
+						  <!-- STEP 13 below here  -->
+						  <p>
+							<input type = "button" class= "clear" value="Clear" onclick = "clearAbout()"> </p>
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<span class="copyright">&copy; Untitled. Design: <a href="https://www.linkedin.com/in/andrew-witt-0a7366237/">Andrew Witt</a>.</span>
+					</footer>
+
+			</div>
+		</div>
+		<script>
+			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+		<script src="./script.js"></script>
+	</body>
+</html>
